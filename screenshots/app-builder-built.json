@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Atlas de Títulos PW",
+      "hasCanvas": false,
+      "bodyTextLen": 6918,
+      "bodyTextHash": "c7b7ecb13a2015ef1a4cdd0679992dc80ead021c46d6aa8aaad572a7bd254acd",
+      "bodyTextPrefix": "GERENTE DE EVENTOS · FABRICAR · AVANÇ. Atlas de títulos — Página",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Atlas de Títulos PW",
+      "hasCanvas": false,
+      "bodyTextLen": 6918,
+      "bodyTextHash": "c7b7ecb13a2015ef1a4cdd0679992dc80ead021c46d6aa8aaad572a7bd254acd",
+      "bodyTextPrefix": "GERENTE DE EVENTOS · FABRICAR · AVANÇ. Atlas de títulos — Página",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

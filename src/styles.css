@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0c0d10;
+  --color-surface: #14151a;
+  --color-panel: #1b1c22;
+  --color-fg: #ece8e0;
+  --color-muted: #9a958c;
+  --color-subtle: #6f6b64;
+  --color-accent: #9aa8b0;
+  --color-accent-fg: #0c0d10;
+  --color-border: color-mix(in oklab, #ece8e0 12%, transparent);
+  --color-border-strong: color-mix(in oklab, #ece8e0 22%, transparent);
+  --color-ok: #7d9a7e;
+  --color-ok-bg: color-mix(in oklab, #7d9a7e 16%, transparent);
+  --color-warn: #c4a574;
+  --color-warn-bg: color-mix(in oklab, #c4a574 16%, transparent);
+  --color-bad: #b87a72;
+  --color-bad-bg: color-mix(in oklab, #b87a72 16%, transparent);
+  --color-rank: #c9d0d4;
+
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2.125rem;
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .ledger {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    min-width: 0;
+  }
+
+  .ledger-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .cost-mark {
+    flex-shrink: 0;
+    text-align: right;
+    min-width: 3.25rem;
+  }
+
+  .stat-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-table th {
+    text-align: left;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-subtle);
+    padding: 0 8px 8px 0;
+  }
+
+  .stat-table th:last-child,
+  .stat-table td:last-child {
+    text-align: right;
+    padding-right: 0;
+  }
+
+  .stat-table th.col-pages,
+  .stat-table td.col-pages {
+    text-align: right;
+    width: 3.25rem;
+    white-space: nowrap;
+    padding-right: 16px;
+  }
+
+  .stat-table td {
+    padding: 9px 10px 9px 0;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    vertical-align: top;
+  }
+
+  .stat-table td:nth-last-child(2):not(.col-pages) {
+    padding-right: 16px;
+  }
+
+  .stat-table tr.total td {
+    border-top: 1px solid var(--color-border-strong);
+    font-weight: 600;
+    color: var(--color-fg);
+    background: color-mix(in oklab, var(--color-accent) 6%, transparent);
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    padding: 0 8px;
+    border-radius: 999px;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .pill-ok {
+    color: var(--color-ok);
+    background: var(--color-ok-bg);
+  }
+
+  .pill-warn {
+    color: var(--color-warn);
+    background: var(--color-warn-bg);
+  }
+
+  .pill-bad {
+    color: var(--color-bad);
+    background: var(--color-bad-bg);
+  }
+
+  .pill-muted {
+    color: var(--color-muted);
+    background: color-mix(in oklab, var(--color-fg) 6%, transparent);
+  }
+
+  .tab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tab {
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-muted);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .tab:hover {
+    color: var(--color-fg);
+    border-color: var(--color-border-strong);
+  }
+
+  .tab-on {
+    color: var(--color-accent-fg);
+    background: var(--color-accent);
+    border-color: transparent;
+  }
+}
